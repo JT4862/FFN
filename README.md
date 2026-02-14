@@ -1,19 +1,51 @@
 # Squarespace Roadmap Block
 
-A self-contained, visual roadmap block for Squarespace websites. Features a horizontal timeline overview with detailed milestone cards below, an overall progress bar, and clean responsive styling.
+A visual roadmap block for Squarespace websites. Features a horizontal timeline overview with detailed milestone cards below, an overall progress bar, and clean responsive styling.
 
-## How to Add to Squarespace
+## Project Structure
+
+```
+FFN/
+├── docs/                  ← Served by GitHub Pages
+│   ├── roadmap.css        ← Styles
+│   └── roadmap.js         ← Config + rendering logic (edit this to update milestones)
+├── loader.html            ← Tiny snippet to paste into Squarespace (one time)
+├── roadmap-block.html     ← Self-contained version (for offline/manual use)
+└── README.md
+```
+
+## Setup (One Time)
+
+### 1. Enable GitHub Pages
+
+1. Go to your repo **Settings** → **Pages**
+2. Under **Source**, select **Deploy from a branch**
+3. Set branch to **main** and folder to **/docs**
+4. Click **Save**
+
+Your files will be served at `https://jt4862.github.io/FFN/`
+
+### 2. Add the Loader to Squarespace
 
 1. Open your Squarespace site editor
 2. Navigate to the page where you want the roadmap
 3. Click **Add Block** → **Code**
-4. Copy the entire contents of `roadmap-block.html` and paste it into the Code Block
-5. Toggle the **Display Source** option **OFF**
+4. Paste the contents of `loader.html`:
+   ```html
+   <link rel="stylesheet" href="https://jt4862.github.io/FFN/roadmap.css">
+   <div class="ffn-roadmap" id="ffn-roadmap"></div>
+   <script src="https://jt4862.github.io/FFN/roadmap.js"></script>
+   ```
+5. Toggle **Display Source** OFF
 6. Save and publish
+
+That's it — you never need to touch Squarespace again.
 
 ## How to Update Milestones
 
-Open `roadmap-block.html` and find the `CONFIG` object inside the `<script>` tag. Edit the `milestones` array:
+Edit `docs/roadmap.js` and update the `FFN_ROADMAP_CONFIG` object at the top. Push to `main` and the changes go live automatically.
+
+Each milestone looks like:
 
 ```javascript
 {
@@ -45,7 +77,7 @@ Change `status: "in-progress"` to `status: "completed"`
 Add a new object to the `milestones` array in the desired position
 
 **Change the roadmap title or subtitle:**
-Edit `CONFIG.title` and `CONFIG.subtitle`
+Edit `FFN_ROADMAP_CONFIG.title` and `FFN_ROADMAP_CONFIG.subtitle`
 
 ## Features
 
@@ -55,4 +87,5 @@ Edit `CONFIG.title` and `CONFIG.subtitle`
 - Overall progress bar with percentage
 - Pulsing animation on in-progress milestones
 - Fully responsive (mobile-friendly)
-- No external dependencies — entirely self-contained
+- No external dependencies
+- Auto-updates on push via GitHub Pages
