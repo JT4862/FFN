@@ -92,6 +92,27 @@ var FFN_ROADMAP_CONFIG = {
       ]
     },
     {
+      title: "Test Milestone Add",
+      date: "Q4 2027",
+      status: "upcoming",
+      description: "Establish the core team, define mission and values, and lay the organizational groundwork.",
+      items: [
+        "Assemble founding team",
+        "Define mission statement",
+        "Establish Core Services",
+        "Set up legal structure"
+      ],
+      detailedDescription: "During Q4 2027 we brought together a multidisciplinary founding team, ratified our mission and values charter, incorporated as a 501(c)(3), and closed our seed round from anchor donors. This phase also included selecting our fiscal sponsor, standing up initial financial controls, and drafting the first version of our bylaws.",
+      detailedItems: [
+        "Recruited founding members across operations, programs, and development",
+        "Conducted a mission & values workshop and published charter document",
+        "Closed seed round from anchor donors",
+        "Filed 501(c)(3) incorporation and selected fiscal sponsor",
+        "Established bank accounts, accounting software, and financial controls",
+        "Drafted bylaws and board governance framework"
+      ]
+    },
+    {
       title: "Fortified Fortress",
       date: "Q1 2028",
       status: "upcoming",
