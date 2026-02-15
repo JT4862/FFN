@@ -2,7 +2,57 @@
   SQUARESPACE LOADER — Paste this into a Squarespace Code Block (one time).
   It loads the roadmap CSS + JS from your GitHub Pages site.
   Future updates pushed to the main branch will appear automatically.
+
+  If the preview doesn't update after a push, click the "Refresh Preview"
+  button below the roadmap to force-reload the latest CSS + JS.
 -->
-<link rel="stylesheet" href="https://jt4862.github.io/FFN/roadmap.css">
+<link rel="stylesheet" id="ffn-css" href="https://jt4862.github.io/FFN/roadmap.css">
 <div class="ffn-roadmap" id="ffn-roadmap"></div>
-<script src="https://jt4862.github.io/FFN/roadmap.js"></script>
+<script id="ffn-js" src="https://jt4862.github.io/FFN/roadmap.js"></script>
+
+<script>
+// Refresh Preview button — force-reloads CSS + JS from GitHub Pages
+(function () {
+  var base = "https://jt4862.github.io/FFN/";
+
+  function refresh() {
+    var v = "?v=" + Date.now();
+
+    // Reload CSS
+    var oldCss = document.getElementById("ffn-css");
+    if (oldCss) oldCss.remove();
+    var newCss = document.createElement("link");
+    newCss.rel = "stylesheet";
+    newCss.id = "ffn-css";
+    newCss.href = base + "roadmap.css" + v;
+    document.head.appendChild(newCss);
+
+    // Reload JS (re-executes, overwrites config, re-renders)
+    var oldJs = document.getElementById("ffn-js");
+    if (oldJs) oldJs.remove();
+    var newJs = document.createElement("script");
+    newJs.id = "ffn-js";
+    newJs.src = base + "roadmap.js" + v;
+    document.body.appendChild(newJs);
+  }
+
+  // Insert button after roadmap renders
+  function addButton() {
+    var root = document.getElementById("ffn-roadmap");
+    if (!root) return;
+    var btn = document.createElement("button");
+    btn.id = "ffn-refresh-btn";
+    btn.textContent = "Refresh Preview";
+    btn.style.cssText = "display:block;margin:1.5rem auto 0;padding:.5rem 1.25rem;font-size:.8rem;color:#6b7280;background:#fff;border:1px solid #e5e7eb;border-radius:6px;cursor:pointer;font-family:inherit;";
+    btn.addEventListener("click", refresh);
+    root.after(btn);
+  }
+
+  // Wait for the roadmap JS to render, then add the button
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () { setTimeout(addButton, 100); });
+  } else {
+    setTimeout(addButton, 100);
+  }
+})();
+</script>

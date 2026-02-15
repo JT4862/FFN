@@ -289,11 +289,17 @@ var FFN_ROADMAP_CONFIG = {
 
     modal.querySelector('.ffn-modal__close').addEventListener('click', closeModal);
     modal.querySelector('.ffn-modal__backdrop').addEventListener('click', closeModal);
-    document.addEventListener('keydown', function (e) {
+
+    // Guard against duplicate keydown listeners on re-execution
+    if (window._ffnEscHandler) {
+      document.removeEventListener('keydown', window._ffnEscHandler);
+    }
+    window._ffnEscHandler = function (e) {
       if (e.key === 'Escape' && modal.classList.contains('ffn-modal--open')) {
         closeModal();
       }
-    });
+    };
+    document.addEventListener('keydown', window._ffnEscHandler);
 
     // Check if timeline needs scroll hint
     var timeline = document.getElementById("ffn-timeline");
