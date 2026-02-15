@@ -6,7 +6,7 @@
 //
 var FFN_ROADMAP_CONFIG = {
   title: "Our Roadmap",
-  subtitle: "Follow our journey as we build toward our vision — one milestone at a time. These roadmap item are subject to chage",
+  subtitle: "Follow our journey as we build toward our vision to protect, empower, and restore survivors of abuse  — one milestone at a time. These roadmap item are subject to chage",
   milestones: [
     // ═══════════════════════════════════════════════════════
     // MILESTONE 1: Foundation
