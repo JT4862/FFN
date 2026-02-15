@@ -30,7 +30,7 @@ var FFN_ROADMAP_CONFIG = {
       ]
     },
     {
-      title: "Brand Launch",
+      title: "Brand Design",
       date: "Q1 2026",
       status: "in-progress",
       description: "Build the Fortified Freedom Network Brand",
@@ -50,7 +50,7 @@ var FFN_ROADMAP_CONFIG = {
       ]
     },
     {
-      title: "Program Launch",
+      title: "Brand Launch",
       date: "Q2 2026",
       status: "upcoming",
       description: "Roll out our flagship programs and begin delivering impact to our community.",
