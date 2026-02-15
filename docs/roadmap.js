@@ -430,6 +430,45 @@ var FFN_ROADMAP_CONFIG = {
     return "&#9675;";
   }
 
+  function setupScrollArrows(scrollEl, container, scrollAmount) {
+    if (!scrollEl || !container) return;
+
+    var leftArrow = container.querySelector('.ffn-scroll-arrow--left');
+    var rightArrow = container.querySelector('.ffn-scroll-arrow--right');
+    var leftGrad = container.querySelector('.ffn-scroll-gradient--left');
+    var rightGrad = container.querySelector('.ffn-scroll-gradient--right');
+
+    function updateArrows() {
+      var sl = scrollEl.scrollLeft;
+      var maxScroll = scrollEl.scrollWidth - scrollEl.clientWidth;
+      var showLeft = sl > 5;
+      var showRight = maxScroll > 5 && sl < maxScroll - 5;
+
+      leftArrow.classList.toggle('ffn-scroll-arrow--visible', showLeft);
+      if (leftGrad) leftGrad.classList.toggle('ffn-scroll-gradient--visible', showLeft);
+      rightArrow.classList.toggle('ffn-scroll-arrow--visible', showRight);
+      if (rightGrad) rightGrad.classList.toggle('ffn-scroll-gradient--visible', showRight);
+    }
+
+    leftArrow.addEventListener('click', function (e) {
+      e.stopPropagation();
+      scrollEl.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    });
+
+    rightArrow.addEventListener('click', function (e) {
+      e.stopPropagation();
+      scrollEl.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    });
+
+    scrollEl.addEventListener('scroll', updateArrows);
+    updateArrows();
+
+    // Track resize handler for cleanup on re-render
+    if (!window._ffnResizeHandlers) window._ffnResizeHandlers = [];
+    window._ffnResizeHandlers.push(updateArrows);
+    window.addEventListener('resize', updateArrows);
+  }
+
   function render() {
     var CONFIG = window.FFN_ROADMAP_CONFIG;
     if (!CONFIG) return;
@@ -474,6 +513,9 @@ var FFN_ROADMAP_CONFIG = {
     html += '</div>';
 
     // Timeline
+    html += '<div class="ffn-scroll-container" id="ffn-timeline-container">';
+    html += '<button class="ffn-scroll-arrow ffn-scroll-arrow--left" aria-label="Scroll timeline left">&#8249;</button>';
+    html += '<div class="ffn-scroll-gradient ffn-scroll-gradient--left"></div>';
     html += '<div class="ffn-timeline" id="ffn-timeline">';
     html += '<div class="ffn-timeline__track">';
     html += '<div class="ffn-timeline__progress" style="width:' + timelineWidth + '%"></div>';
@@ -485,9 +527,15 @@ var FFN_ROADMAP_CONFIG = {
       html += '</div>';
     });
     html += '</div></div>';
+    html += '<div class="ffn-scroll-gradient ffn-scroll-gradient--right"></div>';
+    html += '<button class="ffn-scroll-arrow ffn-scroll-arrow--right" aria-label="Scroll timeline right">&#8250;</button>';
+    html += '</div>';
 
     // Cards
-    html += '<div class="ffn-cards">';
+    html += '<div class="ffn-scroll-container" id="ffn-cards-container">';
+    html += '<button class="ffn-scroll-arrow ffn-scroll-arrow--left" aria-label="Scroll cards left">&#8249;</button>';
+    html += '<div class="ffn-scroll-gradient ffn-scroll-gradient--left"></div>';
+    html += '<div class="ffn-cards" id="ffn-cards">';
     ms.forEach(function (m, i) {
       var meta = STATUS_META[m.status];
       html += '<div class="ffn-card ffn-card--' + m.status + '" data-index="' + i + '">';
@@ -516,6 +564,9 @@ var FFN_ROADMAP_CONFIG = {
       html += '<div class="ffn-card__expand-hint">Click for details &rarr;</div>';
       html += '</div>';
     });
+    html += '</div>';
+    html += '<div class="ffn-scroll-gradient ffn-scroll-gradient--right"></div>';
+    html += '<button class="ffn-scroll-arrow ffn-scroll-arrow--right" aria-label="Scroll cards right">&#8250;</button>';
     html += '</div>';
 
     // Overall progress
@@ -599,28 +650,38 @@ var FFN_ROADMAP_CONFIG = {
     };
     document.addEventListener('keydown', window._ffnEscHandler);
 
-    // Check if timeline needs scroll hint
-    var timeline = document.getElementById("ffn-timeline");
-    if (timeline && timeline.scrollWidth > timeline.clientWidth) {
-      timeline.classList.add("ffn-timeline--scrollable");
-      timeline.addEventListener("scroll", function () {
-        if (timeline.scrollLeft + timeline.clientWidth >= timeline.scrollWidth - 10) {
-          timeline.classList.remove("ffn-timeline--scrollable");
-        } else {
-          timeline.classList.add("ffn-timeline--scrollable");
-        }
+    // Clean up previous resize handlers from prior render
+    if (window._ffnResizeHandlers) {
+      window._ffnResizeHandlers.forEach(function (fn) {
+        window.removeEventListener('resize', fn);
       });
     }
+    window._ffnResizeHandlers = [];
 
-    // Timeline node click — scroll card into view
+    // Set up scroll arrows for timeline and cards
+    var timeline = document.getElementById("ffn-timeline");
+    var timelineContainer = document.getElementById("ffn-timeline-container");
+    setupScrollArrows(timeline, timelineContainer, 250);
+
+    var cardsEl = document.getElementById("ffn-cards");
+    var cardsContainer = document.getElementById("ffn-cards-container");
+    setupScrollArrows(cardsEl, cardsContainer, 320);
+
+    // Timeline node click — scroll card into view (horizontal)
     var nodes = root.querySelectorAll(".ffn-timeline__node");
     var cards = root.querySelectorAll(".ffn-card");
     nodes.forEach(function (node, idx) {
       node.addEventListener("click", function () {
-        if (cards[idx]) {
-          cards[idx].scrollIntoView({ behavior: "smooth", block: "center" });
-          cards[idx].style.boxShadow = "0 0 0 3px rgba(37,99,235,.3), " + getComputedStyle(cards[idx]).boxShadow;
-          setTimeout(function () { cards[idx].style.boxShadow = ""; }, 1500);
+        if (cards[idx] && cardsEl) {
+          var card = cards[idx];
+          var cardLeft = card.offsetLeft;
+          var cardWidth = card.offsetWidth;
+          var containerWidth = cardsEl.clientWidth;
+          var targetScroll = cardLeft - (containerWidth / 2) + (cardWidth / 2);
+          cardsEl.scrollTo({ left: targetScroll, behavior: 'smooth' });
+          card.scrollIntoView({ behavior: "smooth", block: "nearest" });
+          card.style.boxShadow = "0 0 0 3px rgba(37,99,235,.3), " + getComputedStyle(card).boxShadow;
+          setTimeout(function () { card.style.boxShadow = ""; }, 1500);
         }
       });
     });

@@ -80,13 +80,87 @@
 .ffn-roadmap__legend-dot--in-progress { background: var(--clr-progress); }
 .ffn-roadmap__legend-dot--upcoming { background: var(--clr-upcoming); }
 
+/* ── Scrollable Container (shared by timeline & cards) ── */
+.ffn-scroll-container {
+  position: relative;
+}
+
+.ffn-scroll-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--clr-track);
+  background: var(--clr-bg);
+  color: var(--clr-text-muted);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  transition: opacity .3s, background .15s, color .15s;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ffn-scroll-arrow--visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.ffn-scroll-arrow--left  { left: 0; }
+.ffn-scroll-arrow--right { right: 0; }
+
+.ffn-scroll-arrow:hover {
+  background: var(--clr-upcoming-bg);
+  color: var(--clr-text);
+}
+
+/* Vertically align timeline arrows to the dot row */
+#ffn-timeline-container > .ffn-scroll-arrow {
+  top: calc(1rem + 9px);
+}
+
+.ffn-scroll-gradient {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 48px;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.ffn-scroll-gradient--left {
+  left: 0;
+  background: linear-gradient(90deg, var(--clr-bg), transparent);
+}
+
+.ffn-scroll-gradient--right {
+  right: 0;
+  background: linear-gradient(270deg, var(--clr-bg), transparent);
+}
+
+.ffn-scroll-gradient--visible {
+  opacity: 1;
+}
+
 /* ── Horizontal Timeline ─────────────────────────────── */
 .ffn-timeline {
-  position: relative;
   margin-bottom: 3rem;
   overflow-x: auto;
   padding: 1rem 0 1.5rem;
   -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.ffn-timeline::-webkit-scrollbar {
+  display: none;
 }
 
 .ffn-timeline__track {
@@ -203,11 +277,18 @@
   margin-top: .2rem;
 }
 
-/* ── Milestone Cards Grid ────────────────────────────── */
+/* ── Milestone Cards Row ─────────────────────────────── */
 .ffn-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  display: flex;
+  overflow-x: auto;
   gap: 1.25rem;
+  padding: .5rem 0 1rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.ffn-cards::-webkit-scrollbar {
+  display: none;
 }
 
 .ffn-card {
@@ -218,6 +299,9 @@
   box-shadow: var(--shadow);
   transition: box-shadow .25s ease, transform .25s ease, border-color .25s ease;
   cursor: pointer;
+  min-width: 300px;
+  max-width: 300px;
+  flex-shrink: 0;
 }
 
 .ffn-card:hover {
@@ -352,26 +436,9 @@
 /* ── Responsive ──────────────────────────────────────── */
 @media (max-width: 640px) {
   .ffn-roadmap__title { font-size: 1.5rem; }
-  .ffn-cards { grid-template-columns: 1fr; }
   .ffn-timeline__node { min-width: 110px; }
-}
-
-/* ── Scroll hint for timeline ────────────────────────── */
-.ffn-timeline::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 40px;
-  background: linear-gradient(90deg, transparent, var(--clr-bg));
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity .3s;
-}
-
-.ffn-timeline--scrollable::after {
-  opacity: 1;
+  .ffn-card { min-width: 260px; max-width: 260px; }
+  .ffn-scroll-arrow { width: 30px; height: 30px; font-size: .9rem; }
 }
 
 /* ── Card Expand Hint ───────────────────────────────── */
