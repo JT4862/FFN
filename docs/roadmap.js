@@ -10,13 +10,13 @@ var FFN_ROADMAP_CONFIG = {
   milestones: [
     {
       title: "Foundation",
-      date: "Q1 2025",
+      date: "Q4 2025",
       status: "completed",
       description: "Establish the core team, define mission and values, and lay the organizational groundwork.",
       items: [
         "Assemble founding team",
         "Define mission statement",
-        "Secure initial funding",
+        "Establish Core Services",
         "Set up legal structure"
       ],
       detailedDescription: "During Q1 2025 we brought together a multidisciplinary founding team, ratified our mission and values charter, incorporated as a 501(c)(3), and closed our seed round from anchor donors. This phase also included selecting our fiscal sponsor, standing up initial financial controls, and drafting the first version of our bylaws.",
@@ -30,15 +30,14 @@ var FFN_ROADMAP_CONFIG = {
       ]
     },
     {
-      title: "Community Building",
-      date: "Q2 2025",
-      status: "completed",
-      description: "Build relationships with key stakeholders and grow our community presence.",
+      title: "Brand Launch",
+      date: "Q1 2026",
+      status: "in-progress",
+      description: "Build the Fortified Freedom Network Brand",
       items: [
-        "Launch website and social channels",
-        "Host first community event",
+        "Website Design",
+        "Fortified Podcast",
         "Establish partner network",
-        "Reach 500 community members"
       ],
       detailedDescription: "In Q2 2025 we launched our public-facing brand across web and social media, hosted our inaugural community mixer, and formalized partnerships with local organizations. By quarter end we surpassed 500 active community members and established a recurring monthly newsletter.",
       detailedItems: [
@@ -52,8 +51,8 @@ var FFN_ROADMAP_CONFIG = {
     },
     {
       title: "Program Launch",
-      date: "Q3 2025",
-      status: "in-progress",
+      date: "Q2 2026",
+      status: "upcoming",
       description: "Roll out our flagship programs and begin delivering impact to our community.",
       items: [
         "Design program curriculum",
@@ -73,7 +72,7 @@ var FFN_ROADMAP_CONFIG = {
     },
     {
       title: "Scale & Impact",
-      date: "Q1 2026",
+      date: "Q3 2026",
       status: "upcoming",
       description: "Expand our reach and measure the impact of our initiatives across the community.",
       items: [
