@@ -5,15 +5,21 @@
   Paste this entire block into a Squarespace Code Block.
 
   TO UPDATE MILESTONES:
-  Edit the "milestones" array in the <script> section below.
+  Edit the JSON inside the <script id="ffn-roadmap-data"> tag below.
+  IMPORTANT: This is JSON format — all keys must be in "double quotes",
+  no trailing commas, and no comments inside the JSON block.
+
   Each milestone has:
-    - title:       Milestone name
-    - description: Short summary of what this milestone covers
-    - status:      "completed" | "in-progress" | "upcoming"
-    - date:        Target or completion date (e.g. "Q1 2025")
-    - items:       Array of sub-items/deliverables (optional)
-    - detailedDescription: Longer description shown in popup (optional, falls back to description)
-    - detailedItems:       Expanded deliverables shown in popup (optional, falls back to items)
+    - "title":               Milestone name
+    - "description":         Short summary shown on the card
+    - "status":              "completed" | "in-progress" | "upcoming"
+    - "date":                Target or completion date (e.g. "Q1 2025")
+    - "items":               Array of sub-items/deliverables (optional)
+    - "detailedDescription": Longer description shown in popup (optional, falls back to description)
+    - "detailedItems":       Expanded deliverables shown in popup (optional, falls back to items)
+
+  After editing, click the "Refresh Preview" button below the roadmap
+  to see your changes without removing/re-adding the code block.
   ============================================================
 -->
 
@@ -525,7 +531,140 @@
       padding: 1.5rem 1rem;
     }
   }
+
+  /* ── Refresh Preview Button (Squarespace editor aid) ── */
+  .ffn-roadmap__refresh {
+    display: block;
+    margin: 1.5rem auto 0;
+    padding: .5rem 1.25rem;
+    font-size: .8rem;
+    color: var(--clr-text-muted);
+    background: var(--clr-bg);
+    border: 1px solid var(--clr-track);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background .15s ease;
+  }
+  .ffn-roadmap__refresh:hover {
+    background: var(--clr-upcoming-bg);
+  }
 </style>
+
+<!-- ═══ MILESTONE DATA — EDIT BELOW TO UPDATE ROADMAP ═══ -->
+<script type="application/json" id="ffn-roadmap-data">
+{
+  "title": "Our Roadmap",
+  "subtitle": "Follow our journey as we build toward our vision — one milestone at a time.",
+  "milestones": [
+    {
+      "title": "Foundation",
+      "date": "Q1 2025",
+      "status": "completed",
+      "description": "Establish the core team, define mission and values, and lay the organizational groundwork.",
+      "items": [
+        "Assemble founding team",
+        "Define mission statement",
+        "Secure initial funding",
+        "Set up legal structure"
+      ],
+      "detailedDescription": "During Q1 2025 we brought together a multidisciplinary founding team, ratified our mission and values charter, incorporated as a 501(c)(3), and closed our seed round from anchor donors. This phase also included selecting our fiscal sponsor, standing up initial financial controls, and drafting the first version of our bylaws.",
+      "detailedItems": [
+        "Recruited founding members across operations, programs, and development",
+        "Conducted a mission & values workshop and published charter document",
+        "Closed seed round from anchor donors",
+        "Filed 501(c)(3) incorporation and selected fiscal sponsor",
+        "Established bank accounts, accounting software, and financial controls",
+        "Drafted bylaws and board governance framework"
+      ]
+    },
+    {
+      "title": "Community Building",
+      "date": "Q2 2025",
+      "status": "completed",
+      "description": "Build relationships with key stakeholders and grow our community presence.",
+      "items": [
+        "Launch website and social channels",
+        "Host first community event",
+        "Establish partner network",
+        "Reach 500 community members"
+      ],
+      "detailedDescription": "In Q2 2025 we launched our public-facing brand across web and social media, hosted our inaugural community mixer, and formalized partnerships with local organizations. By quarter end we surpassed 500 active community members and established a recurring monthly newsletter.",
+      "detailedItems": [
+        "Designed and launched brand website on Squarespace with CMS",
+        "Created and grew Instagram, LinkedIn, and Facebook channels",
+        "Hosted inaugural community mixer",
+        "Signed partnership MOUs with local organizations",
+        "Surpassed 500 active community members across all platforms",
+        "Launched monthly community newsletter"
+      ]
+    },
+    {
+      "title": "Program Launch",
+      "date": "Q3 2025",
+      "status": "in-progress",
+      "description": "Roll out our flagship programs and begin delivering impact to our community.",
+      "items": [
+        "Design program curriculum",
+        "Recruit first cohort",
+        "Launch mentorship initiative",
+        "Collect baseline metrics"
+      ],
+      "detailedDescription": "Q3 2025 marks the launch of our flagship skills accelerator and 1-on-1 mentorship program. We are currently onboarding our first cohort of participants, pairing them with trained mentors, and establishing the data collection framework that will measure our long-term impact.",
+      "detailedItems": [
+        "Finalized skills accelerator curriculum with expert reviewers",
+        "Recruited first cohort of participants from applications",
+        "Onboarded and trained volunteer mentors",
+        "Launched 1-on-1 mentorship matching platform",
+        "Designed baseline survey instrument and data pipeline",
+        "Scheduled mid-program check-ins and end-of-cohort showcase"
+      ]
+    },
+    {
+      "title": "Scale & Impact",
+      "date": "Q1 2026",
+      "status": "upcoming",
+      "description": "Expand our reach and measure the impact of our initiatives across the community.",
+      "items": [
+        "Expand to 3 new regions",
+        "Publish impact report",
+        "Launch annual fundraiser",
+        "Grow team to 15 members"
+      ],
+      "detailedDescription": "In Q1 2026 we plan to replicate our proven program model in three new regions, publish our first annual impact report with quantitative outcomes, launch a signature fundraising gala, and scale the team to full-time staff members.",
+      "detailedItems": [
+        "Identify and onboard regional leads in target cities",
+        "Adapt program curriculum for regional context and needs",
+        "Compile and publish inaugural annual impact report",
+        "Plan and execute signature fundraising gala",
+        "Hire additional staff across programs, ops, and development",
+        "Establish regional advisory committees in each new market"
+      ]
+    },
+    {
+      "title": "Sustainability",
+      "date": "Q3 2026",
+      "status": "upcoming",
+      "description": "Build long-term sustainability through diversified funding and strong governance.",
+      "items": [
+        "Diversify revenue streams",
+        "Establish advisory board",
+        "Create endowment fund",
+        "Develop 5-year strategic plan"
+      ],
+      "detailedDescription": "By Q3 2026 we aim to secure long-term financial sustainability by diversifying beyond grants into earned revenue, launching a board-managed endowment fund, and completing a comprehensive 5-year strategic plan that charts our path to serving thousands of community members annually.",
+      "detailedItems": [
+        "Launch earned-revenue consulting arm for corporate partners",
+        "Secure multi-year government or foundation grants",
+        "Recruit advisory board with sector expertise",
+        "Seed endowment fund with initial contribution",
+        "Conduct strategic planning retreat with board and staff",
+        "Publish 5-year strategic plan"
+      ]
+    }
+  ]
+}
+</script>
+<!-- ═══ END OF MILESTONE DATA ═══ -->
 
 <div class="ffn-roadmap" id="ffn-roadmap">
   <!-- Rendered by JavaScript below -->
@@ -533,126 +672,14 @@
 
 <script>
 (function () {
-  // ════════════════════════════════════════════════════════
-  //  MILESTONE DATA — EDIT THIS SECTION TO UPDATE ROADMAP
-  // ════════════════════════════════════════════════════════
-  //
-  //  status options:  "completed"  |  "in-progress"  |  "upcoming"
-  //
-  const CONFIG = {
-    title: "Our Roadmap",
-    subtitle: "Follow our journey as we build toward our vision — one milestone at a time.",
-    milestones: [
-      {
-        title: "Foundation",
-        date: "Q1 2025",
-        status: "completed",
-        description: "Establish the core team, define mission and values, and lay the organizational groundwork.",
-        items: [
-          "Assemble founding team",
-          "Define mission statement",
-          "Secure initial funding",
-          "Set up legal structure"
-        ],
-        detailedDescription: "During Q1 2025 we brought together a multidisciplinary founding team, ratified our mission and values charter, incorporated as a 501(c)(3), and closed our seed round from anchor donors. This phase also included selecting our fiscal sponsor, standing up initial financial controls, and drafting the first version of our bylaws.",
-        detailedItems: [
-          "Recruited founding members across operations, programs, and development",
-          "Conducted a mission & values workshop and published charter document",
-          "Closed seed round from anchor donors",
-          "Filed 501(c)(3) incorporation and selected fiscal sponsor",
-          "Established bank accounts, accounting software, and financial controls",
-          "Drafted bylaws and board governance framework"
-        ]
-      },
-      {
-        title: "Community Building",
-        date: "Q2 2025",
-        status: "completed",
-        description: "Build relationships with key stakeholders and grow our community presence.",
-        items: [
-          "Launch website and social channels",
-          "Host first community event",
-          "Establish partner network",
-          "Reach 500 community members"
-        ],
-        detailedDescription: "In Q2 2025 we launched our public-facing brand across web and social media, hosted our inaugural community mixer, and formalized partnerships with local organizations. By quarter end we surpassed 500 active community members and established a recurring monthly newsletter.",
-        detailedItems: [
-          "Designed and launched brand website on Squarespace with CMS",
-          "Created and grew Instagram, LinkedIn, and Facebook channels",
-          "Hosted inaugural community mixer",
-          "Signed partnership MOUs with local organizations",
-          "Surpassed 500 active community members across all platforms",
-          "Launched monthly community newsletter"
-        ]
-      },
-      {
-        title: "Program Launch",
-        date: "Q3 2025",
-        status: "in-progress",
-        description: "Roll out our flagship programs and begin delivering impact to our community.",
-        items: [
-          "Design program curriculum",
-          "Recruit first cohort",
-          "Launch mentorship initiative",
-          "Collect baseline metrics"
-        ],
-        detailedDescription: "Q3 2025 marks the launch of our flagship skills accelerator and 1-on-1 mentorship program. We are currently onboarding our first cohort of participants, pairing them with trained mentors, and establishing the data collection framework that will measure our long-term impact.",
-        detailedItems: [
-          "Finalized skills accelerator curriculum with expert reviewers",
-          "Recruited first cohort of participants from applications",
-          "Onboarded and trained volunteer mentors",
-          "Launched 1-on-1 mentorship matching platform",
-          "Designed baseline survey instrument and data pipeline",
-          "Scheduled mid-program check-ins and end-of-cohort showcase"
-        ]
-      },
-      {
-        title: "Scale & Impact",
-        date: "Q1 2026",
-        status: "upcoming",
-        description: "Expand our reach and measure the impact of our initiatives across the community.",
-        items: [
-          "Expand to 3 new regions",
-          "Publish impact report",
-          "Launch annual fundraiser",
-          "Grow team to 15 members"
-        ],
-        detailedDescription: "In Q1 2026 we plan to replicate our proven program model in three new regions, publish our first annual impact report with quantitative outcomes, launch a signature fundraising gala, and scale the team to full-time staff members.",
-        detailedItems: [
-          "Identify and onboard regional leads in target cities",
-          "Adapt program curriculum for regional context and needs",
-          "Compile and publish inaugural annual impact report",
-          "Plan and execute signature fundraising gala",
-          "Hire additional staff across programs, ops, and development",
-          "Establish regional advisory committees in each new market"
-        ]
-      },
-      {
-        title: "Sustainability",
-        date: "Q3 2026",
-        status: "upcoming",
-        description: "Build long-term sustainability through diversified funding and strong governance.",
-        items: [
-          "Diversify revenue streams",
-          "Establish advisory board",
-          "Create endowment fund",
-          "Develop 5-year strategic plan"
-        ],
-        detailedDescription: "By Q3 2026 we aim to secure long-term financial sustainability by diversifying beyond grants into earned revenue, launching a board-managed endowment fund, and completing a comprehensive 5-year strategic plan that charts our path to serving thousands of community members annually.",
-        detailedItems: [
-          "Launch earned-revenue consulting arm for corporate partners",
-          "Secure multi-year government or foundation grants",
-          "Recruit advisory board with sector expertise",
-          "Seed endowment fund with initial contribution",
-          "Conduct strategic planning retreat with board and staff",
-          "Publish 5-year strategic plan"
-        ]
-      }
-    ]
-  };
-  // ════════════════════════════════════════════════════════
-  //  END OF EDITABLE SECTION
-  // ════════════════════════════════════════════════════════
+  // Read milestone data from the JSON element above
+  // (This allows the "Refresh Preview" button to pick up edits
+  //  without removing and re-adding the code block.)
+  function getConfig() {
+    var el = document.getElementById("ffn-roadmap-data");
+    if (!el) return null;
+    return JSON.parse(el.textContent);
+  }
 
   const STATUS_META = {
     "completed":   { label: "Completed",   icon: "&#10003;", badgeClass: "completed" },
@@ -667,7 +694,10 @@
   }
 
   function render() {
+    var CONFIG = getConfig();
+    if (!CONFIG) return;
     var root = document.getElementById("ffn-roadmap");
+    if (!root) return;
     var ms = CONFIG.milestones;
     var completedCount = ms.filter(function (m) { return m.status === "completed"; }).length;
     var inProgressCount = ms.filter(function (m) { return m.status === "in-progress"; }).length;
@@ -756,7 +786,13 @@
     html += '<div class="ffn-roadmap__progress-bar"><div class="ffn-roadmap__progress-fill" style="width:' + progressPct + '%"></div></div>';
     html += '</div>';
 
+    // Refresh Preview button (for Squarespace editor)
+    html += '<button class="ffn-roadmap__refresh" id="ffn-refresh-btn">Refresh Preview</button>';
+
     root.innerHTML = html;
+
+    // Refresh button handler — re-reads JSON data and re-renders
+    document.getElementById('ffn-refresh-btn').addEventListener('click', render);
 
     // ── Modal shell ──
     var modalHtml = '';
@@ -819,11 +855,17 @@
 
     modal.querySelector('.ffn-modal__close').addEventListener('click', closeModal);
     modal.querySelector('.ffn-modal__backdrop').addEventListener('click', closeModal);
-    document.addEventListener('keydown', function (e) {
+
+    // Guard against duplicate keydown listeners on re-render
+    if (window._ffnEscHandler) {
+      document.removeEventListener('keydown', window._ffnEscHandler);
+    }
+    window._ffnEscHandler = function (e) {
       if (e.key === 'Escape' && modal.classList.contains('ffn-modal--open')) {
         closeModal();
       }
-    });
+    };
+    document.addEventListener('keydown', window._ffnEscHandler);
 
     // Check if timeline needs scroll hint
     var timeline = document.getElementById("ffn-timeline");
