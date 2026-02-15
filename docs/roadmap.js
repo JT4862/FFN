@@ -1,5 +1,5 @@
 // ════════════════════════════════════════════════════════
-//  MILESTONE DATA — EDIT THIS FILE TO UPDATE THE ROADMAP
+//  FORTIFIED FREEDOM NETWORK ROADMAP DATA
 // ════════════════════════════════════════════════════════
 //
 //  status options:  "completed"  |  "in-progress"  |  "upcoming"
@@ -8,6 +8,9 @@ var FFN_ROADMAP_CONFIG = {
   title: "Our Roadmap",
   subtitle: "Follow our journey as we build toward our vision — one milestone at a time.",
   milestones: [
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 1: Foundation
+    // ═══════════════════════════════════════════════════════
     {
       title: "Foundation",
       date: "Q4 2025",
@@ -16,121 +19,396 @@ var FFN_ROADMAP_CONFIG = {
       items: [
         "Assemble founding team",
         "Define mission statement",
-        "Establish Core Services",
+        "Establish core services",
         "Set up legal structure"
       ],
-      detailedDescription: "During Q1 2025 we brought together a multidisciplinary founding team, ratified our mission and values charter, incorporated as a 501(c)(3), and closed our seed round from anchor donors. This phase also included selecting our fiscal sponsor, standing up initial financial controls, and drafting the first version of our bylaws.",
+      detailedDescription: "During Q4 2025 we brought together a multidisciplinary founding team—JT, Steph, and Jenn—united by our shared experiences and commitment to education over retaliation. We ratified our mission and values charter around the core philosophy of helping survivors identify manipulation patterns rather than seeking revenge. We established Fortified Media as our first business entity and began weekly vision and planning meetings to map out the Fortified Freedom Network.",
       detailedItems: [
-        "Recruited founding members across operations, programs, and development",
-        "Conducted a mission & values workshop and published charter document",
-        "Closed seed round from anchor donors",
-        "Filed 501(c)(3) incorporation and selected fiscal sponsor",
-        "Established bank accounts, accounting software, and financial controls",
-        "Drafted bylaws and board governance framework"
+        "Assembled founding team across operations, content creation, and documentation",
+        "Conducted mission & values workshop establishing 'education over retaliation' philosophy",
+        "Established Fortified Media business structure",
+        "Secured domains: fortifiedfreedom.org and filterparent.io",
+        "Set up Google Workspace and Google Cloud Platform infrastructure",
+        "Created brand identity: shield (protection), feather (freedom), quill (truth)",
+        "Initiated weekly founder meetings and strategic planning sessions"
       ]
     },
+
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 2: Brand & Content
+    // ═══════════════════════════════════════════════════════
     {
-      title: "Brand Design",
+      title: "Brand & Content",
       date: "Q1 2026",
       status: "in-progress",
-      description: "Build the Fortified Freedom Network Brand",
+      description: "Record podcast episodes, build our website, and create content library for launch.",
       items: [
-        "Website Design",
-        "Fortified Podcast",
-        "Establish partner network",
+        "Record 10+ podcast episodes",
+        "Build website on fortifiedfreedom.org",
+        "Create short-form content library",
+        "Establish production workflow"
       ],
-      detailedDescription: "In Q2 2025 we launched our public-facing brand across web and social media, hosted our inaugural community mixer, and formalized partnerships with local organizations. By quarter end we surpassed 500 active community members and established a recurring monthly newsletter.",
+      detailedDescription: "In Q1 2026 we're deep in production mode—recording our founder story episodes, expert interviews, and building the content foundation that will fuel our launch. We're setting up our website, refining our equipment and workflows, and creating a library of short-form content. This is the quiet but critical phase where we're building the quality and authenticity that will define the Fortified Freedom Network.",
       detailedItems: [
-        "Designed and launched brand website on Squarespace with CMS",
-        "Created and grew Instagram, LinkedIn, and Facebook channels",
-        "Hosted inaugural community mixer",
-        "Signed partnership MOUs with local organizations",
-        "Surpassed 500 active community members across all platforms",
-        "Launched monthly community newsletter"
+        "Recording founder story episodes (Episodes 2-6: Steph, Jenn, JT personal journeys)",
+        "Recording expert interviews (Karlie Paige and others in pipeline)",
+        "Building 10+ episode buffer for weekly podcast releases",
+        "Designing and launching website on fortifiedfreedom.org",
+        "Setting up podcast equipment and production workflow",
+        "Creating initial short-form content for TikTok launch",
+        "Refining brand voice and messaging across all platforms",
+        "Preparing launch marketing materials and strategy"
       ]
     },
+
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 3: Podcast Launch
+    // ═══════════════════════════════════════════════════════
     {
-      title: "Brand Launch",
+      title: "Podcast Launch",
       date: "Q2 2026",
       status: "upcoming",
-      description: "Roll out our flagship programs and begin delivering impact to our community.",
+      description: "Launch the Fortified Podcast on YouTube and begin building our community through education.",
       items: [
-        "Design program curriculum",
-        "Recruit first cohort",
-        "Launch mentorship initiative",
-        "Collect baseline metrics"
+        "Launch podcast on YouTube (April 2026)",
+        "Begin weekly episode releases",
+        "Start daily short-form content",
+        "Grow initial community"
       ],
-      detailedDescription: "Q3 2025 marks the launch of our flagship skills accelerator and 1-on-1 mentorship program. We are currently onboarding our first cohort of participants, pairing them with trained mentors, and establishing the data collection framework that will measure our long-term impact.",
+      detailedDescription: "In Q2 2026 we're launching the Fortified Podcast on YouTube—the #1 watched platform in America. Starting with our founder vision meeting as Episode 1, followed by our personal stories and expert interviews, we're committing to weekly releases. Simultaneously, we're launching daily short-form content on TikTok to reach survivors where they are and begin building the credibility that will support all future initiatives.",
       detailedItems: [
-        "Finalized skills accelerator curriculum with expert reviewers",
-        "Recruited first cohort of participants from applications",
-        "Onboarded and trained volunteer mentors",
-        "Launched 1-on-1 mentorship matching platform",
-        "Designed baseline survey instrument and data pipeline",
-        "Scheduled mid-program check-ins and end-of-cohort showcase"
+        "Launched Fortified Podcast on YouTube with 10+ episode buffer",
+        "Established weekly release schedule (specific day/time TBD)",
+        "Published Episode 1: Founder vision meeting",
+        "Released founder story episodes establishing credibility",
+        "Launched daily short-form content on TikTok (minimum 1 video/day)",
+        "Began building initial community and engagement",
+        "Implemented SEO strategy for discoverability",
+        "Created podcast chapter markers for mid-form content extraction"
       ]
     },
+
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 4: Platform Expansion
+    // ═══════════════════════════════════════════════════════
     {
-      title: "Scale & Impact",
+      title: "Platform Expansion",
       date: "Q3 2026",
       status: "upcoming",
-      description: "Expand our reach and measure the impact of our initiatives across the community.",
+      description: "Expand our reach across multiple platforms, grow our following, and recruit experts for our network.",
       items: [
-        "Expand to 3 new regions",
-        "Publish impact report",
-        "Launch annual fundraiser",
-        "Grow team to 15 members"
+        "Launch on Instagram and Facebook",
+        "Implement content automation",
+        "Recruit experts and coaches",
+        "Launch donations page",
+        "Grow to 500+ community members"
       ],
-      detailedDescription: "In Q1 2026 we plan to replicate our proven program model in three new regions, publish our first annual impact report with quantitative outcomes, launch a signature fundraising gala, and scale the team to full-time staff members.",
+      detailedDescription: "In Q3 2026 we're expanding beyond YouTube and TikTok to Instagram and Facebook, meeting survivors on the platforms they already use. We're implementing automation tools to efficiently manage cross-platform content while maintaining authentic engagement. Critically, we're also recruiting licensed counselors, therapists, life coaches, and subject matter experts who will become integral to our podcast content and future platform offerings. We're launching our donations page, allowing supporters to fund the mission. Our goal is building a community of 500+ active members alongside a network of vetted professionals.",
       detailedItems: [
-        "Identify and onboard regional leads in target cities",
-        "Adapt program curriculum for regional context and needs",
-        "Compile and publish inaugural annual impact report",
-        "Plan and execute signature fundraising gala",
-        "Hire additional staff across programs, ops, and development",
-        "Establish regional advisory committees in each new market"
+        "Launched Instagram and Facebook channels",
+        "Implemented Repurpose.io for automated cross-posting to Instagram Reels, YouTube Shorts, and Facebook",
+        "Established content moderation workflows using Agorapulse",
+        "Recruited licensed counselors, therapists, and life coaches for platform network",
+        "Invited experts onto podcast for interviews and educational content",
+        "Launched donations page on website for mission support",
+        "Began building recurring donor base",
+        "Grew active community to 500+ members across all platforms",
+        "Collected baseline engagement metrics and audience insights",
+        "Began testing mid-form content (10-15 minute podcast segments)",
+        "Created expert vetting process and partnership framework"
       ]
     },
+
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 5: Private Social Network & Partnership Ecosystem
+    // ═══════════════════════════════════════════════════════
     {
-      title: "Test Milestone Add",
+      title: "Private Social Network & Partnership Ecosystem",
+      date: "Q3-Q4 2026",
+      status: "upcoming",
+      description: "Build and launch our private community platform while formalizing partnerships to create the complete survivor support pipeline.",
+      items: [
+        "Build custom social platform ($4.99/mo)",
+        "Partner with rescue organizations (DVRR)",
+        "Launch monthly expert Q&A calls",
+        "Establish technology integrations"
+      ],
+      detailedDescription: "Starting in Q3 2026, we begin building our private community platform on open-source software while simultaneously negotiating partnerships with organizations like DVRR. This development phase runs parallel to our platform expansion work, with our technical team building the infrastructure and partnership framework. In Q4 2026, we launch the platform to members—providing a safe space behind a $4.99/month paywall (with sponsorships available)—and formalize our partnership agreements. The experts recruited in Milestone 4 are now available for monthly member Q&A calls, and technology integrations allow survivors to flow seamlessly through the complete pipeline: rescue → safety → healing → community → career.",
+      detailedItems: [
+        "Q3 2026 - Development Phase: Began building custom social platform on open-source foundation",
+        "Negotiated partnership agreements with DVRR and other rescue organizations",
+        "Designed technology integration architecture for partner handoffs",
+        "Developed moderation systems and reporting mechanisms",
+        "Created verification process and membership framework",
+        "Established $4.99/month pricing tier with sponsorship program structure",
+        "Q4 2026 - Launch Phase: Launched platform to first members",
+        "Formalized and signed partnership agreements",
+        "Deployed technology integrations with partner platforms",
+        "Initiated monthly live expert Q&A calls with recruited professionals",
+        "Launched quarterly founder vision meetings for member transparency",
+        "Activated self-moderating community culture",
+        "Established complete survivor pipeline from rescue through healing"
+      ]
+    },
+
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 6: FilterParent MVP
+    // ═══════════════════════════════════════════════════════
+    {
+      title: "FilterParent MVP",
+      date: "Q1 2027",
+      status: "upcoming",
+      description: "Launch beta of our AI-powered co-parent communication tool.",
+      items: [
+        "Beta launch FilterParent app",
+        "AI-powered message filtering",
+        "Evidence preservation system",
+        "User feedback integration"
+      ],
+      detailedDescription: "In Q1 2027 we're launching the beta version of FilterParent—the app that started this entire journey. This AI-powered tool helps survivors navigate high-conflict co-parenting by filtering manipulative language, preserving evidence, and providing communication tools that protect mental health while maintaining necessary parenting coordination. Beta users help us refine features before full public launch, ensuring the app truly serves those in the trenches of parallel parenting. FilterParent will have its own detailed roadmap as a separate business entity.",
+      detailedItems: [
+        "Launched FilterParent beta to select user group",
+        "Implemented AI communication analysis engine (identifying DARVO, gaslighting, manipulation)",
+        "Built comprehensive evidence archiving and export features",
+        "Integrated SMS/messaging platform support via Twilio",
+        "Developed PostgreSQL database architecture for secure data storage",
+        "Collected user feedback for v1.0 improvements",
+        "Established subscription pricing model",
+        "Created Node.js backend and React Native frontend"
+      ]
+    },
+
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 7: Scale & Impact
+    // ═══════════════════════════════════════════════════════
+    {
+      title: "Scale & Impact",
+      date: "Q2 2027",
+      status: "upcoming",
+      description: "Grow to 5,000+ members, measure our impact, and validate revenue sustainability for team expansion.",
+      items: [
+        "Reach 5,000+ community members",
+        "Publish first impact report",
+        "Validate recurring revenue model",
+        "FilterParent development roadmap (parallel)"
+      ],
+      detailedDescription: "In Q2 2027 we're scaling our community from hundreds to thousands while proving our model works. We're targeting 5,000+ members across our platforms, collecting comprehensive impact data, and publishing our first annual impact report showing real outcomes from our education and support systems. This quarter validates our recurring revenue from platform subscriptions and donations, confirming we can sustainably hire staff. In parallel, FilterParent continues its own development roadmap as a separate business entity.",
+      detailedItems: [
+        "Grew community to 5,000+ members across all platforms",
+        "Published first annual impact report with survivor outcomes and metrics",
+        "Collected quantitative data: members helped, manipulation patterns identified, successful escapes",
+        "Gathered qualitative testimonials and success stories",
+        "Validated monthly recurring revenue from platform subscriptions ($7,500+/mo)",
+        "Confirmed donation revenue sustainability ($2,000-5,000/mo)",
+        "Analyzed revenue trends to support hiring decisions",
+        "FilterParent continues separate development track with its own roadmap",
+        "Optimized platform features based on member feedback",
+        "Refined expert Q&A format and quarterly founder meetings"
+      ]
+    },
+
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 8: Team Growth & Educational Expansion
+    // ═══════════════════════════════════════════════════════
+    {
+      title: "Team Growth & Educational Expansion",
+      date: "Q3 2027",
+      status: "upcoming",
+      description: "Hire our first staff members and expand our educational offerings beyond the podcast.",
+      items: [
+        "Hire Community Manager",
+        "Hire Content/Marketing Manager",
+        "Launch educational curriculum",
+        "Begin speaking engagements"
+      ],
+      detailedDescription: "In Q3 2027 we're making our first critical hires to support our growing community and expand our reach. With validated recurring revenue, we're bringing on a Community Manager to handle moderation, member support, and engagement, plus a Content/Marketing Manager to manage our cross-platform presence and content strategy. We're also launching formal educational resources—downloadable guides, workshop curricula, and webinar series—and beginning speaking engagements to spread our education-over-retaliation philosophy to broader audiences.",
+      detailedItems: [
+        "Hired full-time Community Manager for platform moderation and member support",
+        "Hired full-time or part-time Content/Marketing Manager for cross-platform strategy",
+        "Established employee onboarding and training processes",
+        "Created employment agreements and HR framework",
+        "Launched educational curriculum: pattern recognition guides, safety planning toolkits",
+        "Developed workshop series on manipulation tactics (DARVO, gaslighting, coercive control)",
+        "Created webinar program for organizations and churches",
+        "Began speaking engagements at conferences and community events",
+        "Developed downloadable resources and toolkits for survivors",
+        "Established speaker training for founders"
+      ]
+    },
+
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 9: Survivor Documentary Production
+    // ═══════════════════════════════════════════════════════
+    {
+      title: "Survivor Documentary Production",
       date: "Q4 2027",
       status: "upcoming",
-      description: "Establish the core team, define mission and values, and lay the organizational groundwork.",
+      description: "Produce a professional documentary featuring survivor stories and the healing journey.",
       items: [
-        "Assemble founding team",
-        "Define mission statement",
-        "Establish Core Services",
-        "Set up legal structure"
+        "Hire professional film crew",
+        "Film survivor healing journeys",
+        "Produce feature-length documentary",
+        "Plan premiere event"
       ],
-      detailedDescription: "During Q4 2027 we brought together a multidisciplinary founding team, ratified our mission and values charter, incorporated as a 501(c)(3), and closed our seed round from anchor donors. This phase also included selecting our fiscal sponsor, standing up initial financial controls, and drafting the first version of our bylaws.",
+      detailedDescription: "In Q4 2027 we're producing a professional documentary that shows the complete survivor journey—from abuse to escape to healing to thriving. Working with a professional film crew, we're meeting survivors in person to capture their authentic stories, weaving in the Fortified Freedom Network's mission and the power of education, community, and support. This isn't just content creation; it's a powerful tool for awareness, fundraising, education, and hope. The documentary will premiere at our Q1 2028 gala and serve as a cornerstone piece for grant applications and major donor cultivation.",
       detailedItems: [
-        "Recruited founding members across operations, programs, and development",
-        "Conducted a mission & values workshop and published charter document",
-        "Closed seed round from anchor donors",
-        "Filed 501(c)(3) incorporation and selected fiscal sponsor",
-        "Established bank accounts, accounting software, and financial controls",
-        "Drafted bylaws and board governance framework"
+        "Recruited and vetted professional documentary film crew and production team",
+        "Selected survivors willing to share their stories on camera",
+        "Conducted pre-production planning: story arcs, interview questions, filming locations",
+        "Filmed survivor interviews capturing abuse, escape, healing, and thriving stages",
+        "Captured B-roll footage of FFN community, podcast recordings, platform engagement",
+        "Wove in FFN mission, values, and 'education over retaliation' philosophy",
+        "Completed post-production: editing, sound design, color grading",
+        "Created promotional materials and trailer",
+        "Planned premiere event for Q1 2028 gala",
+        "Developed distribution strategy (film festivals, streaming, educational licensing)"
       ]
     },
+
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 10: Gala & Sponsor Matching
+    // ═══════════════════════════════════════════════════════
     {
-      title: "Fortified Fortress",
+      title: "Gala & Sponsor Matching",
       date: "Q1 2028",
       status: "upcoming",
-      description: "Build long-term sustainability through diversified funding and strong governance.",
+      description: "Host our inaugural annual gala and launch one-to-one sponsor matching program.",
       items: [
-        "Diversify revenue streams",
-        "Establish advisory board",
-        "Create endowment fund",
-        "Develop 5-year strategic plan"
+        "Host inaugural annual gala",
+        "Launch sponsor-to-survivor matching",
+        "Premiere survivor documentary",
+        "Create donor transparency system"
       ],
-      detailedDescription: "By Q3 2026 we aim to secure long-term financial sustainability by diversifying beyond grants into earned revenue, launching a board-managed endowment fund, and completing a comprehensive 5-year strategic plan that charts our path to serving thousands of community members annually.",
+      detailedDescription: "In Q1 2028 we're hosting our first annual gala—a celebration bringing together donors, survivors, experts, and supporters. This is where sponsors meet the survivors they've helped, where we premiere our documentary, and where we launch our one-to-one sponsor matching program with full transparency. Donors won't just see stock photos; they'll meet real people, hear real stories, and see exactly how their support creates transformation. This milestone cements our commitment to authentic, accountable, transparent fundraising.",
       detailedItems: [
-        "Launch earned-revenue consulting arm for corporate partners",
-        "Secure multi-year government or foundation grants",
-        "Recruit advisory board with sector expertise",
-        "Seed endowment fund with initial contribution",
-        "Conduct strategic planning retreat with board and staff",
-        "Publish 5-year strategic plan"
+        "Planned and executed inaugural annual gala event",
+        "Premiered survivor documentary to attendees",
+        "Launched one-to-one sponsor-to-survivor matching program",
+        "Created donor transparency portal showing real impact and fund allocation",
+        "Facilitated in-person meetings between sponsors and survivors they've supported",
+        "Collected major donor commitments for Fortress campaign",
+        "Published year-end impact report with comprehensive metrics",
+        "Established annual gala as recurring event",
+        "Created testimonial and story-sharing opportunities",
+        "Built deeper relationships with major donor prospects"
+      ]
+    },
+
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 11: Fortress Foundation
+    // ═══════════════════════════════════════════════════════
+    {
+      title: "Fortress Foundation",
+      date: "Q2 2028",
+      status: "upcoming",
+      description: "Establish separate 501(c)(3) nonprofit for the Fortified Fortress initiative.",
+      items: [
+        "File 501(c)(3) for Fortress nonprofit",
+        "Recruit board of directors",
+        "Establish governance structure",
+        "Begin grant writing preparation"
+      ],
+      detailedDescription: "In Q2 2028 we're establishing the legal and governance foundation for the Fortified Fortress by creating a separate 501(c)(3) nonprofit entity. This allows donors to receive tax benefits for Fortress contributions and positions us to apply for grants and major foundation funding. We're recruiting a diverse, experienced board of directors, establishing bylaws and governance policies, and preparing comprehensive grant proposals. This milestone separates operational FFN work from the capital-intensive Fortress development while maintaining mission alignment.",
+      detailedItems: [
+        "Filed 501(c)(3) nonprofit incorporation for Fortified Fortress",
+        "Drafted and ratified bylaws and governance policies",
+        "Recruited board of directors with expertise in real estate, nonprofit management, mental health, and fundraising",
+        "Established board meeting cadence and committee structure",
+        "Created conflict of interest and ethics policies",
+        "Developed grant writing strategy and identified target foundations",
+        "Prepared comprehensive grant proposals with mission, impact data, and financial projections",
+        "Established fiscal controls and accounting systems for nonprofit",
+        "Created donor cultivation materials specific to Fortress mission",
+        "Began relationship building with foundation program officers"
+      ]
+    },
+
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 12: Major Fundraising Campaign
+    // ═══════════════════════════════════════════════════════
+    {
+      title: "Major Fundraising Campaign",
+      date: "Q3 2028",
+      status: "upcoming",
+      description: "Launch capital campaign to raise funds for Fortress property acquisition and construction.",
+      items: [
+        "Launch capital campaign ($2-5M goal)",
+        "Solicit major donor commitments",
+        "Submit foundation grant applications",
+        "Build Fortress donor base"
+      ],
+      detailedDescription: "In Q3 2028 we're launching our major capital campaign to raise the funds needed for Fortress property acquisition, construction, and initial operations. With our 501(c)(3) established, impact data proven, and documentary showcasing real transformation, we're positioned to solicit major gifts from high-net-worth individuals, family foundations, and institutional funders. This isn't just fundraising; it's inviting people into a legacy project that will provide safe haven for survivors for generations to come.",
+      detailedItems: [
+        "Launched public capital campaign with $2-5M goal",
+        "Created comprehensive campaign materials: case for support, impact data, architectural renderings",
+        "Solicited major donor commitments ($50K+ gifts)",
+        "Submitted grant applications to major foundations",
+        "Hosted donor cultivation events and site visit opportunities",
+        "Established naming rights opportunities for major donors",
+        "Created multi-year pledge options for sustained giving",
+        "Developed corporate sponsorship packages",
+        "Engaged professional fundraising consultant if needed",
+        "Built donor stewardship plan for campaign contributors",
+        "Tracked campaign progress and milestone celebrations"
+      ]
+    },
+
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 13: Property Acquisition Prep
+    // ═══════════════════════════════════════════════════════
+    {
+      title: "Property Acquisition Prep",
+      date: "Q4 2028",
+      status: "upcoming",
+      description: "Identify and prepare for Fortress property acquisition through research, planning, and due diligence.",
+      items: [
+        "Conduct property search (15-20 acres)",
+        "Complete feasibility studies",
+        "Architectural and site planning",
+        "Zoning and permitting research"
+      ],
+      detailedDescription: "In Q4 2028 we're transitioning from fundraising to execution by conducting comprehensive property search and acquisition preparation. We're identifying potential 15-20 acre properties that meet our security, accessibility, and zoning requirements. Working with architects and planners, we're developing site plans for tiny homes/cabins, security infrastructure, common areas, and support facilities. We're navigating zoning regulations, permitting requirements, and conducting feasibility studies to ensure our vision is buildable and sustainable. By quarter end, we're ready to make an offer or begin negotiations.",
+      detailedItems: [
+        "Conducted property search in target regions with 15-20 acre minimum",
+        "Evaluated properties for: security capability, accessibility, zoning compliance, utilities access",
+        "Engaged real estate professionals specializing in rural/development properties",
+        "Completed environmental and geological feasibility studies",
+        "Hired architect to develop site plans and tiny home/cabin designs",
+        "Created preliminary budget for construction and infrastructure",
+        "Researched zoning regulations and special use permits",
+        "Initiated conversations with local planning departments",
+        "Developed timeline for property closing, construction, and opening",
+        "Prepared purchase offer or negotiation strategy",
+        "Secured financing commitments or cash reserves for acquisition"
+      ]
+    },
+
+    // ═══════════════════════════════════════════════════════
+    // MILESTONE 14: Fortified Fortress
+    // ═══════════════════════════════════════════════════════
+    {
+      title: "Fortified Fortress",
+      date: "Q1 2029",
+      status: "upcoming",
+      description: "Open our first safe haven compound for survivors in transition.",
+      items: [
+        "Acquire 15-20 acre property",
+        "Build tiny home residences",
+        "Hire 24/7 security and support staff",
+        "Launch 6-12 month residency program"
+      ],
+      detailedDescription: "In Q1 2029 we're opening the Fortified Fortress—our long-term vision made real. A 15-20 acre compound with tiny homes or log cabins where survivors can live rent-free or low-rent for 6-12 months while rebuilding their lives from the ground up. With 24/7 security from trained veterans and law enforcement, on-site counselors, life skills training, and career services, the Fortress completes our full-circle mission: from education to community to tangible safe haven. This is where victims become survivors become thrivers.",
+      detailedItems: [
+        "Acquired and secured 15-20 acre property with gated perimeter",
+        "Built tiny home/cabin residences (Tesla houses or similar) for 10-15 survivors",
+        "Hired 24/7 security team from trained veterans and law enforcement",
+        "Established rigorous security protocols and background check systems",
+        "Created on-site counseling services with licensed therapists",
+        "Launched life skills training: budgeting, cooking, self-sufficiency, homesteading",
+        "Developed career placement program with professional mentors",
+        "Implemented 6-12 month residency structure with clear milestones",
+        "Integrated intake process with DVRR and partner referrals",
+        "Established ongoing operational funding and sustainability plan"
       ]
     }
   ]
