@@ -6,7 +6,7 @@
 //
 var FFN_ROADMAP_CONFIG = {
   title: "Our Roadmap",
-  subtitle: "Follow our journey as we build toward our vision — one milestone at a time.",
+  subtitle: "Follow our journey as we build toward our vision — one milestone at a time. These roadmap item are subject to chage",
   milestones: [
     // ═══════════════════════════════════════════════════════
     // MILESTONE 1: Foundation
@@ -128,19 +128,19 @@ var FFN_ROADMAP_CONFIG = {
       status: "upcoming",
       description: "Build and launch our private community platform while formalizing partnerships to create the complete survivor support pipeline.",
       items: [
-        "Build custom social platform ($4.99/mo)",
-        "Partner with rescue organizations (DVRR)",
+        "Build custom social platform",
+        "Partner with other DV organizations",
         "Launch monthly expert Q&A calls",
         "Establish technology integrations"
       ],
       detailedDescription: "Starting in Q3 2026, we begin building our private community platform on open-source software while simultaneously negotiating partnerships with organizations like DVRR. This development phase runs parallel to our platform expansion work, with our technical team building the infrastructure and partnership framework. In Q4 2026, we launch the platform to members—providing a safe space behind a $4.99/month paywall (with sponsorships available)—and formalize our partnership agreements. The experts recruited in Milestone 4 are now available for monthly member Q&A calls, and technology integrations allow survivors to flow seamlessly through the complete pipeline: rescue → safety → healing → community → career.",
       detailedItems: [
         "Q3 2026 - Development Phase: Began building custom social platform on open-source foundation",
-        "Negotiated partnership agreements with DVRR and other rescue organizations",
+        "Negotiated partnership agreements other DV organizations",
         "Designed technology integration architecture for partner handoffs",
         "Developed moderation systems and reporting mechanisms",
         "Created verification process and membership framework",
-        "Established $4.99/month pricing tier with sponsorship program structure",
+        "Established pricing tier with sponsorship program structure",
         "Q4 2026 - Launch Phase: Launched platform to first members",
         "Formalized and signed partnership agreements",
         "Deployed technology integrations with partner platforms",
