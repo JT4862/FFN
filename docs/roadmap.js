@@ -92,8 +92,8 @@ var FFN_ROADMAP_CONFIG = {
       ]
     },
     {
-      title: "Sustainability",
-      date: "Q3 2026",
+      title: "Fortified Fortress",
+      date: "Q1 2028",
       status: "upcoming",
       description: "Build long-term sustainability through diversified funding and strong governance.",
       items: [
